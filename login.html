@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        body{
+            background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(pic/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+        .log{
+            width: 360px;
+            padding: 10% 0 0;
+            margin: auto;
+        }
+        .form{
+            position: relative;
+            z-index: 1;
+            background: rgba(65, 63, 63, 0.6);
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+        }
+
+        .form input{
+            font-family: sans-serif;
+            outline: none;
+            background: #cac6c6;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+        .form input::placeholder{
+            font-size: 14px;
+            color: rgb(17, 17, 17);
+        }
+
+        .form button{
+            font-family: sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4caf50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #ffffff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .form button:hover,.form button:active{
+            background: #72a076;
+            /* transition: 0.8s; */
+        }
+        .form .mssg{
+            margin: 15px 0 0;
+            color: rgb(245, 248, 250);
+            font-size: 15px;
+        }
+        .form .mssg a{
+            text-decoration: underline;
+            color: #bdf291;
+        }
+        .form .login-form{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="log">
+        <div class="form">
+            <form class="reg">
+                <input type="text" placeholder="Full Name"/>
+                <input type="text" placeholder="User id" />
+                <input type="email" placeholder="Email"/>
+                <input type="password" placeholder="Password"/>
+                <button type="submit">Create</button>
+                <p class="mssg">Having Account ?  <a href="#">Login Now</a> </p>
+            </form>
+            <form class="login-form">
+                <input type="text" placeholder="User id"/>
+                <input type="password" placeholder="Password"/>
+                <button type="submit">Login</button>
+                <p class="mssg">Not having Account ? <a href="#" >Register Now</a></p>    
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('.mssg a').click(function(){
+        $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+    })
+</script>
+</html>

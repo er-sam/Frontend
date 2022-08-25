@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+.header{
+    padding: 200px;
+    height: 150px;
+    border-bottom-left-radius: 500px 60px;
+    border-bottom-right-radius: 500px 50px;
+    background-color: rgb(94, 97, 100);
+}
